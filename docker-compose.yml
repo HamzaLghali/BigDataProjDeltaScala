@@ -1,0 +1,19 @@
+version: '3'
+services:
+  hue:
+    image: gethue/hue:latest
+    container_name: hue
+    ports:
+      - "8888:8888"
+    environment:
+      - HUE_USER=admin
+      - HUE_PASSWORD=password
+      - HUE_EMAIL=admin@example.com
+
+    networks:
+      - hue-network
+    restart: always
+
+networks:
+  hue-network:
+    driver: bridge
