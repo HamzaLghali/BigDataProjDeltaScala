@@ -13,13 +13,6 @@ object pgconn extends App {
   val statement: Statement = connection.createStatement()
 
 
-  //val del= s"truncate table $tb_name"
-
-  //statement.executeQuery(del)
-  //  val selectS = s"select * from $tb_name"
-  //  val het = statement.executeQuery(selectS)
-
-
   //Sql insertion
   val insert = s"INSERT INTO public.employees(emp_id, age, address) VALUES (3, 34, 'Marrakech');"
   try {

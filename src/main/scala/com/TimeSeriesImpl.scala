@@ -1,35 +1,35 @@
 package com
 
 
-import tools.pgconn.statement
+import tools.pgconn.{insert, statement}
 import org.apache.spark.sql.DataFrame
 import tools.SparkCore.spark
-import tools.TechTools.{DisplayTableData} //getSelectTable}
+import tools.TechTools.SelectTb
 
 
 
 object TimeSeriesImpl extends App {
 
 
+ private val mocktable = "mock_data"
+ private val mocktableenri ="enriched_mock_data"
 
- println("v3")
+
+
  try {
 
-  val tables = spark.sql("SELECT * FROM test")
-  print(tables)
+  SelectTb(mocktable).toDF().join(SelectTb(mocktableenri).toDF())
 
- }catch {
+  println("Joined")
 
-  case error: Exception => error.printStackTrace()
-   println("An error occurred: " + error.getMessage)
-
- } finally {
-
-    println("End of block")
-
- }
+ } catch {
+  case e: Exception => println(s"Error occurred: ${e.getMessage}")
+ }finally {println("End of block")}
 
 
- DisplayTableData("test")
+ println("here")
+
+
+ Seq
 
 }
