@@ -15,8 +15,23 @@ object pgconn extends App {
   private val tb_name="Employees"
 
 
+  //val del= s"truncate table $tb_name"
+
+  //statement.executeQuery(del)
 //  val selectS = s"select * from $tb_name"
 //  val het = statement.executeQuery(selectS)
+  val insert = s"INSERT INTO public.employees(emp_id, age, address) VALUES (3, 34, 'Marrakech');"
+
+
+  try {
+    val stin = statement.executeUpdate(insert)
+    println("Record inserted successfully.")
+  } catch {
+    case e: Exception => println(s"Error occurred: ${e.getMessage}")
+  }
+
+
+
 
   val resultSet: ResultSet = statement.executeQuery(s"SELECT * FROM $tb_name")
   while (resultSet.next()) {
