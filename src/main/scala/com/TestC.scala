@@ -1,7 +1,7 @@
 package com
 
 import tools.SparkCore.spark
-import tools.pgconn.{connection, statement}
+import tools.PostgresConnection.{connection, statement}
 import org.apache.spark.sql.DataFrame
 import tools.TechTools.SelectTb
 

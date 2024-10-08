@@ -24,6 +24,9 @@ libraryDependencies ++= Seq(
 libraryDependencies += "org.postgresql" % "postgresql" % "42.6.0"
 
 
+
+libraryDependencies += "com.amazon.deequ" % "deequ" % "2.0.0-spark-3.1"
+
 //libraryDependencies += "io.delta" %% "delta-spark" % "3.2.1"
 
 //libraryDependencies += "com.lihaoyi" %% "requests" % "0.9.0" // sbt

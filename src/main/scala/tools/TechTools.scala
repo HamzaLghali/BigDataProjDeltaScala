@@ -2,18 +2,20 @@ package tools
 
 import org.apache.spark.sql.DataFrame
 import tools.SparkCore.spark
-import tools.pgconn.{statement,connection}
-import java.sql.{ResultSet}
+import tools.PostgresConnection.{statement,connection}
+import java.sql.ResultSet
 
 
 
 
 
 /**
+ *
  * This object is for predefined functions
  * such as select statement
  *
  *Author: Hamza Lghali
+ *
  * */
 
 object TechTools {

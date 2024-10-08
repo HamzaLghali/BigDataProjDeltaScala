@@ -3,10 +3,12 @@ package tools
 import java.sql.{Connection, DriverManager, Statement}
 
 
-object pgconn extends App {
+object PostgresConnection extends App {
 
 
-  val url = "jdbc:postgresql://localhost:5432/Scala"
+
+
+  val url = "jdbc:postgresql://localhost:5432/scala"
   val username = "postgres"
   val password = "password"
   val connection: Connection = DriverManager.getConnection(url, username, password)
@@ -21,8 +23,6 @@ object pgconn extends App {
   } catch {
     case e: Exception => println(s"Error occurred: ${e.getMessage}")
   }
-
-
 
   // Close the connection
 
