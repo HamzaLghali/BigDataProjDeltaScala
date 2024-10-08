@@ -9,19 +9,52 @@ import java.sql.{ResultSet}
 
 
 
+/**
+ * This object is for predefined functions
+ * such as select statement
+ *
+ *Author: Hamza Lghali
+ * */
 
 object TechTools {
 
 
+  /**
+   *
+   * Try{}
+   * catch{
+   * case error: Exception =>
+   * error.printStackTrace()
+   * println("An error occurred: " + error.getMessage)
+   * }
+   * finally{}
+   *
+   * */
 
 
-  def SelectTb(tbname : String) : DataFrame={
+
+
+
+
+  /**
+   *
+   *
+   * This func SelectTb is for selecting tables from db
+   * such as select statement
+   *
+   *
+   * */
+  def SelectTbss(tbname : String) : DataFrame={
 
     spark.sql(s"select * from $tbname")
 
   }
 
-//
+
+
+
+
+  //
 //  def DisplayTableData(tableName: String): Unit = {
 //    try {
 //      if (tableName == null || tableName.isEmpty) {
