@@ -44,9 +44,10 @@ object TechTools {
    *
    *
    * */
-  def SelectTbss(tbname : String) : DataFrame={
+  def SelectTb(tbname : String, dbname :String) : DataFrame={
 
-    spark.sql(s"select * from $tbname")
+    spark.sql(s"select * from "+ dbname +"."+ tbname)
+
 
   }
 
