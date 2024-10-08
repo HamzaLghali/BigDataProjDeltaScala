@@ -33,7 +33,7 @@ object TechTools {
       }
     } catch {
       case error: Exception =>
-        error.printStackTrace()  // This will help you debug further
+        error.printStackTrace()
         println("An error occurred: " + error.getMessage)
     } finally {
       println("Finally block executed")
